@@ -9,6 +9,12 @@ async function loadAgents() {
 
   try {
     const response = await fetch('https://valorant-api.com/v1/agents?isPlayableCharacter=true');
+
+    //checks if there are server error like 404 / 500
+    if (!response.ok){
+      throw new Error("Server error: " + response.status)
+    }
+
     const data = await response.json();
     const agents = data.data;
 
