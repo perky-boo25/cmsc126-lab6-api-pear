@@ -8,16 +8,10 @@ async function loadAgents() {
   container.textContent = 'Loading Agents...';
 
   try {
-    // fetch data from valorant api
     const response = await fetch('https://valorant-api.com/v1/agents?isPlayableCharacter=true');
-
-    // convert response to json
     const data = await response.json();
-
-    // get agents list
     const agents = data.data;
 
-    // clear container
     container.innerHTML = '';
 
     // loop through agents
