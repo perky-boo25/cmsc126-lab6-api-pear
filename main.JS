@@ -73,13 +73,8 @@ async function loadAgents() {
         abilityList.appendChild(item);
       });
 
-      // add ability list to section
       section.appendChild(abilityList);
-
-      // divider
       section.appendChild(document.createElement('hr'));
-
-      // add section to container
       container.appendChild(section);
     });
 
