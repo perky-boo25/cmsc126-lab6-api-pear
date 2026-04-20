@@ -250,7 +250,10 @@ async function displayResults() {
 
     // name match 
     if (matches.name) {
-
+      // set description
+      var desc = card.querySelector(".description");
+      desc.textContent = agent.description || "No description available";
+     
       for (var a = 0; a < agent.abilities.length; a++) {
 
         var ability = agent.abilities[a];
@@ -291,6 +294,11 @@ async function displayResults() {
     // role match 
     else if (matches.role) {
       list.innerHTML = "";
+      // hide "Abilities:" label
+      var label = card.querySelector(".abilities-label");
+      if (label) {
+        label.style.display = "none";
+      }
     }
 
     container.appendChild(card);
