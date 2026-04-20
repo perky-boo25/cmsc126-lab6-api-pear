@@ -1,23 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset ='UTF-8'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <!--TODO: Change the website name later on-->
-    <title>[pear lab 6] - API</title>
-    <link rel="stylesheets" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[pear lab 6] - API </title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-    </header>
-    <!---------------HOME---------------------->
-    <section id="display">
-        <div id="agents"></div>
-    </section>
-    <footer>
-        <!--PEAR LOGO, NASA LOGO, CREDITS, OTHER INFOS TOO-->
-    </footer>
-    <script src="main.JS"></script>
-</body>
 
+  <header>
+    <h1>VALORANT <span>AGENTS</span></h1>
+  </header>
+
+  <div class="controls">
+    <button class="filter-btn active" data-role="all">All</button>
+    <button class="filter-btn" data-role="Duelist">Duelist</button>
+    <button class="filter-btn" data-role="Initiator">Initiator</button>
+    <button class="filter-btn" data-role="Controller">Controller</button>
+    <button class="filter-btn" data-role="Sentinel">Sentinel</button>
+  </div>
+
+  <main>
+    <div id="agents"></div>
+  </main>
+
+  <!-- agent card template -->
+  <template id="agent-template">
+    <div class="agent-card">
+      <img class="portrait">
+      <div class="card-info">
+        <h2 class="agent-name"></h2>
+        <p class="role"></p>
+        <p class="abilities-label">Abilities:</p>
+        <ul class="ability-list"></ul>
+      </div>
+    </div>
+  </template>
+
+  <!-- ability item template -->
+  <template id="ability-template">
+    <li class="ability">
+      <img class="ability-icon">
+      <span class="ability-name"></span>
+      <span class="ability-slot"></span>
+    </li>
+  </template>
+
+  <footer>
+    <p>            
+        <br>
+           <img src="logo.png" width="60">
+         <br>
+    </p>
+  </footer>
+
+  <script src="main.JS"></script>
+</body>
 </html>

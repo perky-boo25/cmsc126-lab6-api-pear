@@ -1,15 +1,67 @@
-/*================GLOBAL==============*/
-/*TODO: Navbars, Search Background, Body, and other properties*/
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-/*================HOME==============*/
-/*TODO: Website Name, description, and button*/
+body { font-family: sans-serif; padding: 16px; }
 
-/*================FACT OF THE DAY==============*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid #ffffff;
+  margin-bottom: 16px;
+}
 
-/*================DESCRIPTION OF ROVERS==============*/
+.controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 16px;
+}
 
-/*================ROVERS DISPLAY==============*/
+.filter-btn {
+  border: 1px solid black;
+  background: none;
+  padding: 5px 13px;
+  cursor: pointer;
+}
 
-/*================SPACE WEATHER==============*/
+.filter-btn.active { background: black; color: white; border-color: black; }
 
-/*================GALLERY==============*/
+#agents {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.agent-card { border: 1px solid #ccc; overflow: hidden; }
+
+.agent-card img.portrait {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.card-info {
+  padding: 12px;
+  background: #1a1a2e; /* dark bg para magpakita ang icons nde daan kitaon if white ikaw na bahala yon */
+  color: white;
+}
+
+.card-info h2 { font-size: 16px; margin-bottom: 4px; }
+
+.card-info .role { font-size: 13px; color: red; margin-bottom: 8px; }
+
+.abilities-label { font-size: 12px; color: black; margin-bottom: 4px; }
+
+
+.ability { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+
+.ability-name { font-size: 13px; }
+
+.ability-slot { font-size: 11px; color: gray; }
+
+footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid black; font-size: 12px; color: black; }
+
