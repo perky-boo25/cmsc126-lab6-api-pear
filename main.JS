@@ -5,7 +5,7 @@ async function loadAgents() {
   const container = document.getElementById('agents');
 
   // show loading text
-  container.textContent = 'loading...';
+  container.textContent = 'Loading Agents...';
 
   try {
     // fetch data from valorant api
