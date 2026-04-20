@@ -1,14 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+.orbitron-font {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-body { font-family: sans-serif; padding: 16px; }
+body { font-family: sans-serif; 
+  background: black;
+  padding: 20px;
+  color: black;}
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px 0;
-  border-bottom: 1px solid #ffffff;
-  margin-bottom: 16px;
+  border-bottom: 2px solid #ff4655;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: white;
+}
+
+header h1 span { color: #ff4655;}
+
+#search-bar {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  height: 35px;
+  gap: 2px;
+  border: none;
+}
+
+#search-bar button {
+  background: #ff4655;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+#searchInput {
+  flex: 1;
+  width: 100%;
+  padding: 8px 12px;
 }
 
 .controls {
@@ -20,21 +65,31 @@ header {
 }
 
 .filter-btn {
-  border: 1px solid black;
+  border: 1px solid #908f8f;
   background: none;
-  padding: 5px 13px;
+  padding: 5px 15px;
   cursor: pointer;
+  font-size: 15px;
+  letter-spacing: .5px;
+  color: #888;
+  transition: all .15s;
 }
 
-.filter-btn.active { background: black; color: white; border-color: black; }
+.filter-btn.active { background: black; color: white;}
 
 #agents {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 14px;
 }
 
-.agent-card { border: 1px solid #ccc; overflow: hidden; }
+.agent-card { 
+  border: 1px solid #222; 
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #111;
+}
 
 .agent-card img.portrait {
   width: 100%;
@@ -46,22 +101,59 @@ header {
 
 .card-info {
   padding: 12px;
-  background: #1a1a2e; /* dark bg para magpakita ang icons nde daan kitaon if white ikaw na bahala yon */
+  background: #0f0e17; /* dark bg para magpakita ang icons nde daan kitaon if white ikaw na bahala yon */
   color: white;
+  flex: 1;
 }
 
-.card-info h2 { font-size: 16px; margin-bottom: 4px; }
+.card-info h2 { 
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  font-size: 13px; 
+  letter-spacing: .5px;
+  margin-bottom: 5px; 
+}
 
-.card-info .role { font-size: 13px; color: red; margin-bottom: 8px; }
+.card-info .role { 
+  font-size: 11px; 
+  color: #ff4655; 
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
 
-.abilities-label { font-size: 12px; color: black; margin-bottom: 4px; }
+.abilities-label {
+  font-size: 12px; 
+  color: #aaaaaa; 
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
 
+.ability {
+  display: flex; 
+  align-items: center; 
+  gap: 7px; 
+  margin-bottom: 5px;
+  color: #aaaaaa;
+}
 
-.ability { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+.ability img {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+}
+.ability-name { font-size: 13px; color: #ddd; }
 
-.ability-name { font-size: 13px; }
+.ability-slot { font-size: 11px; color: gray; margin-left: auto; }
 
-.ability-slot { font-size: 11px; color: gray; }
-
-footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid black; font-size: 12px; color: black; }
+footer {
+  margin-top: 30px; 
+  padding-top: 15px; 
+  border-top: 1px solid #222; 
+  font-size: 12px; 
+  color: #aaaaaa; 
+  text-align: center;
+  gap: 10px;
+}
 
