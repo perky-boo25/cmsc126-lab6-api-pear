@@ -250,6 +250,7 @@ async function displayResults() {
 
     // name match 
     if (matches.name) {
+
       // set description
       var desc = card.querySelector(".description");
       desc.textContent = agent.description || "No description available";
@@ -262,11 +263,20 @@ async function displayResults() {
 
         var item = abilityTemplate.content.cloneNode(true);
 
-        item.querySelector(".ability-name").textContent =
-          ability.displayName;
+        var icon = item.querySelector(".ability-icon");
+
+        if (ability.displayIcon) {
+          icon.src = ability.displayIcon;
+          icon.alt = ability.displayName;
+          icon.width = 16;
+        } else {
+          icon.remove();
+        }
+
+        item.querySelector(".ability-name").textContent = ability.displayName;
 
         item.querySelector(".ability-slot").textContent =
-          ability.description || "";
+          "(" + ability.slot + ") " + (ability.description || "");
 
         list.appendChild(item);
       }
@@ -281,11 +291,20 @@ async function displayResults() {
 
         var item = abilityTemplate.content.cloneNode(true);
 
-        item.querySelector(".ability-name").textContent =
-          ab.displayName;
+        var icon = item.querySelector(".ability-icon");
+
+        if (ab.displayIcon) {
+          icon.src = ab.displayIcon;
+          icon.alt = ab.displayName;
+          icon.width = 16;
+        } else {
+          icon.remove();
+        }
+
+        item.querySelector(".ability-name").textContent = ab.displayName;
 
         item.querySelector(".ability-slot").textContent =
-          ab.description || "";
+          "(" + ab.slot + ") " + (ab.description || "");
 
         list.appendChild(item);
       }
