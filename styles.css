@@ -125,6 +125,7 @@ header h1 span { color: #ff4655;}
 .abilities-label {
   font-size: 12px; 
   color: #aaaaaa; 
+  margin-top: 5px;
   margin-bottom: 6px;
   text-transform: uppercase;
   letter-spacing: .5px;
